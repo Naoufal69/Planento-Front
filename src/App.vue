@@ -1,7 +1,18 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <HelloWorld />
+  <div class="min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <Header />
+
+    <main class="flex-1 bg-gray-50">
+      <router-view />
+    </main>
+
+    <!-- FOOTER -->
+    <Footer />
+  </div>
 </template>
+
+<script setup>
+import Header from "./view/HeaderView.vue";
+import Footer from "./view/FooterView.vue";
+</script>
